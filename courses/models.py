@@ -15,7 +15,7 @@ class Courses(models.Model):
     course_exams = models.CharField(max_length=20)
     course_duration = models.PositiveSmallIntegerField()
 
-
+    objects = models.Manager()
 
     def __str__(self) -> str:
         return f"{self.course_name}"
