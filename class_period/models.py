@@ -14,7 +14,8 @@ class Class_Period(models.Model):
         ('SUN', 'Sunday'),
     ]
     name = models.CharField(max_length=100, default='Default Name')
-    class_id = models.AutoField(primary_key=True)
+    # class_id = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     class_period_classroom = models.CharField(max_length=20)
     class_period_course_taught = models.CharField(max_length=20)
     class_period_start_time = models.TimeField()
