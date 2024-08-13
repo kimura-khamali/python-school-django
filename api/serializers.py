@@ -1,14 +1,16 @@
-from rest_framework import serializers
+# pylint: disable=missing-class-docstring
+# from rest_framework import serializers
 from student.models import Student
 from classes.models import Classes
 from courses.models import Courses
 from teacher.models import Teacher
 from class_period.models import Class_Period
+from rest_framework import serializers
 
 class StudentSerializers(serializers.ModelSerializer):
-      class Meta:
-            model=Student
-            fields='__all__'    
+    class Meta:
+        model=Student
+        fields='__all__'    
 
 
 class TeacherSerializer(serializers.ModelSerializer):

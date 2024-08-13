@@ -13,7 +13,7 @@ class Class_Period(models.Model):
         ('SAT', 'Saturday'),
         ('SUN', 'Sunday'),
     ]
-    name = models.CharField(max_length=100, default='Default Name')
+    name = models.CharField(max_length=100)
     # class_id = models.AutoField(primary_key=True)
     id = models.AutoField(primary_key=True)
     class_period_classroom = models.CharField(max_length=20)
