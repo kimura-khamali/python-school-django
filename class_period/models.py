@@ -1,5 +1,8 @@
 from django.db import models
 
+from courses.models import Courses
+from teacher.models import Teacher
+
 # Create your models here.
 
 
@@ -21,6 +24,8 @@ class Class_Period(models.Model):
     class_period_start_time = models.TimeField()
     class_period_end_time = models.TimeField()
     class_period_Day_of_the_week = models.CharField(max_length=20)
+    courses = models.ManyToManyField(Courses)
+    teacher = models.ManyToManyField(Teacher)
 
     objects = models.Manager()
    

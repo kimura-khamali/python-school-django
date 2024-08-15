@@ -1,5 +1,9 @@
 from django.db import models
 
+from classes.models import Classes
+from courses.models import Courses
+
+
 GENDER_CHOICES = (
     ('M', 'Male'),
     ('F', 'Female'),
@@ -19,6 +23,8 @@ class Teacher(models.Model):
     teacher_gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     # teacher_headshot = models.ImageField(upload_to='photo/')
     teacher_headshot = models.ImageField(default='default_teacher_headshot.jpg')
+    classes= models.ManyToManyField(Classes)
+    courses = models.ManyToManyField(Courses)
     
     objects = models.Manager()
 

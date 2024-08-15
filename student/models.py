@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models.manager import Manager
 
 from classes.models import Classes
-from courses.models import Courses
+# from courses.models import Courses
 
 class Student(models.Model):
     first_name = models.CharField(max_length=100)
@@ -16,7 +16,7 @@ class Student(models.Model):
     contact = models.CharField(max_length=20)
     bio = models.TextField()
     name = models.CharField(max_length=100, default='Default Name')
-    courses = models.ManyToManyField(Courses)
+    # courses = models.ManyToManyField(Courses)
     classes = models.ManyToManyField(Classes)
 
 
