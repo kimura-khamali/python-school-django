@@ -7,7 +7,7 @@ from student.models import Student
 
 class Courses(models.Model):
     course_name= models.CharField(max_length=20)
-    course_instructor = models.CharField(max_length=20)
+    # course_instructor = models.CharField(max_length=20, default='Default name')
     course_department = models.CharField(max_length=20)
     course_syllabus = models.CharField(max_length=20)
     course_code = models.PositiveSmallIntegerField()
@@ -15,7 +15,8 @@ class Courses(models.Model):
     course_level = models.CharField(max_length=20)
     course_description = models.TextField()
     course_exams = models.CharField(max_length=20)
-    course_duration = models.PositiveSmallIntegerField()
+    # course_duration = models.PositiveSmallIntegerField()
+    course_duration = models.CharField(max_length=100)
     students = models.ManyToManyField(Student)
 
     objects = models.Manager()
