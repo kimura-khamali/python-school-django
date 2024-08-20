@@ -85,5 +85,10 @@ class StudentSerializers(serializers.ModelSerializer):
 
 
 
+class ClassesSerializers(serializers.ModelSerializer):
+    class Meta:
+        model=Classes
+        fields='__all__'  
+
 
 

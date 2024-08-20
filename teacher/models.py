@@ -28,8 +28,8 @@ class Teacher(models.Model):
     
     objects = models.Manager()
 
-    class Meta:
-        ordering = ['teacher_name']
+    # class Meta:
+    #     ordering = ['teacher_name']
 
     def __str__(self):
         return f"{self.teacher_name}"
