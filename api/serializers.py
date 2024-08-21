@@ -33,10 +33,10 @@ class minimalClassesSerializer(serializers.ModelSerializer):
         fields = ["name", "check_name"]
 ##########
 
-class TeacherSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Teacher
-        fields= '__all__'
+# class TeacherSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Teacher
+#         fields= '__all__'
 
 
 
@@ -92,3 +92,24 @@ class ClassesSerializers(serializers.ModelSerializer):
 
 
 
+class TeacherSerializer(serializers.ModelSerializer):
+    classes = ClassesSerializer(many=True) 
+    courses = CoursesSerializer(many=True) 
+
+    class Meta:
+        model = Teacher
+        fields = [
+            'id',
+            'teacher_name',
+            'teacher_age',
+            'teacher_id',
+            'teacher_course',
+            'teacher_description',
+            'teacher_occupation',
+            'teacher_salary',
+            'teacher_hobby',
+            'teacher_gender',
+            'teacher_headshot',
+            'classes', 
+            'courses'   
+        ]

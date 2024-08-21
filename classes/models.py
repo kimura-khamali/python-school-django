@@ -10,6 +10,7 @@ class Classes(models.Model):
         ('SAT', 'Saturday'),
         ('SUN', 'Sunday'),
     ]
+    # class_name = models.CharField(max_length=20)
     name = models.CharField(max_length=100, default='Default Name')
     class_id = models.AutoField(primary_key=True)
     room_number = models.CharField(max_length=20)

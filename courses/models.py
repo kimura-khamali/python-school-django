@@ -16,7 +16,7 @@ class Courses(models.Model):
     course_description = models.TextField()
     course_exams = models.CharField(max_length=20)
     # course_duration = models.PositiveSmallIntegerField()
-    course_duration = models.CharField(max_length=100)
+    # course_duration = models.CharField(max_length=100)
     students = models.ManyToManyField(Student)
 
     objects = models.Manager()
