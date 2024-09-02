@@ -1,7 +1,7 @@
 from django.db import models
 
 from classes.models import Classes
-from courses.models import Courses
+# from courses.models import Courses
 
 
 GENDER_CHOICES = (
@@ -24,7 +24,7 @@ class Teacher(models.Model):
     # teacher_headshot = models.ImageField(upload_to='photo/')
     teacher_headshot = models.ImageField(default='default_teacher_headshot.jpg')
     classes= models.ManyToManyField(Classes)
-    courses = models.ManyToManyField(Courses)
+    # courses = models.ManyToManyField(Courses)
     
     objects = models.Manager()
 

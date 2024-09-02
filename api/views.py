@@ -11,7 +11,6 @@ from teacher.models import Teacher
 from courses.models import Courses
 from rest_framework import status
 from .serializers import StudentSerializers, minimalClass_PeriodSerializer, minimalClassesSerializer, minimalStudentSerializers, minimalTeacherSerializer
-# from .serializers import StudentSerializers, minimalClass_PeriodSerializer, minimalClassesSerializer, minimalStudentSerializers, minimalTeacherSerializer
 from .serializers import TeacherSerializer
 from .serializers import ClassesSerializer
 from .serializers import Class_PeriodSerializer

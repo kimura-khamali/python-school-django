@@ -53,6 +53,15 @@ class CoursesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Courses
         fields = '__all__'
+
+# class minimalCoursesSerializer(serializers.ModelSerializer):
+#     get_name = serializers.SerializerMethodField()
+#     def get_full_name(self, object):
+#         return f"{object.course_name}"
+
+#     class Meta:
+#           model = Courses
+#           fields = ["course_name", "course_level", "get_name"]          
 #########
 class Class_PeriodSerializer(serializers.ModelSerializer):
     class Meta:
@@ -93,7 +102,8 @@ class ClassesSerializers(serializers.ModelSerializer):
 
 
 class TeacherSerializer(serializers.ModelSerializer):
-    classes = ClassesSerializer(many=True) 
+    # classes = ClassesSerializer(many=True) 
+    
     courses = CoursesSerializer(many=True) 
 
     class Meta:

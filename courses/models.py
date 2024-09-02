@@ -1,6 +1,6 @@
 from django.db import models
 
-from student.models import Student
+# from student.models import Student
 
 # Create your models here.
 
@@ -16,8 +16,8 @@ class Courses(models.Model):
     course_description = models.TextField()
     course_exams = models.CharField(max_length=20)
     # course_duration = models.PositiveSmallIntegerField()
-    # course_duration = models.CharField(max_length=100)
-    students = models.ManyToManyField(Student)
+    course_duration = models.CharField(max_length=100, default='Default name')
+    # students = models.ManyToManyField(Student)
 
     objects = models.Manager()
 

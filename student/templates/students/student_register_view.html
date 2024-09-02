@@ -1,0 +1,43 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'students_app/styles.css' %}"
+    />
+    <title>Student Registration</title>
+  </head>
+  <body>
+    <h3>Student Registration</h3>
+    <form method="post" class="Register">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit" class="btn-save">Save</button>
+    </form>
+  </body>
+</html>
+
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head# def register_Student(request):
+#     form = Student_RegistrationForm()
+#     # return render(request,"student/register_Student.html",{"form":form})
+#     return render(request,'students/register_Student.html',{"form":form})
+
+>
+  <body>
+    <h3>Student Registration</h3>
+    <form method="post" class="Register">
+      {%csrf_token%} {{form.as_p}}
+      <button type="submit" class="btn-save">Save</button>
+    </form>
+  </body>
+</html> -->
